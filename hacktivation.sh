@@ -94,8 +94,8 @@ read -p " Choose >  " ch
 
 if [ $ch = 1 ]; then
 
-echo "deb https://assets.checkra.in/debian /" | sudo tee -a /etc/apt/sources.list
-apt-key adv --fetch-keys https://assets.checkra.in/debian/archive.key
+wget -O - https://assets.checkra.in/debian/archive.key | gpg --dearmor | sudo tee /usr/share/keyrings/checkra1n.gpg >/dev/null
+echo 'deb [signed-by=/usr/share/keyrings/checkra1n.gpg] https://assets.checkra.in/debian /' | sudo tee /etc/apt/sources.list.d/checkra1n.list
 apt update
 apt install -y python libcurl4-openssl-dev libplist-dev libzip-dev openssl libssl-dev libusb-1.0-0-dev libreadline-dev build-essential git make automake libtool pkg-config checkra1n sshpass
 git clone 'https://github.com/libimobiledevice/libirecovery'

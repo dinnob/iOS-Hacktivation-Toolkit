@@ -57,7 +57,7 @@ UBUNTU LIVE USB USERS WILL NEED TO ENABLE SOFTWARE REPOS IN SOFTWARE & UPDATES
 
 
 ```
-sudo apt install git
+sudo apt install git -y
 git clone https://github.com/dinnob/iOS-Hacktivation-Toolkit.git
 cd iOS-Hacktivation-Toolkit/
 chmod +x hacktivation.sh

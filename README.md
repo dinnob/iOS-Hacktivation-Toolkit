@@ -58,13 +58,13 @@ UBUNTU LIVE USB USERS WILL NEED TO ENABLE SOFTWARE REPOS IN SOFTWARE & UPDATES
 
 ```
 sudo apt install git
-git clone https://github.com/Hacktivation/iOS-Hacktivation-Toolkit.git
+git clone https://github.com/dinnob/iOS-Hacktivation-Toolkit.git
 cd iOS-Hacktivation-Toolkit/
 chmod +x hacktivation.sh
 sudo ./hacktivation.sh
 ```
 
-Tested on Debian 10 and Ubuntu 20.04
+Tested on Linux Mint 20.3
 
 Looking for developers! This is a work in progress. If you think you can add to this project please get in touch!
 

@@ -98,6 +98,7 @@ wget -O - https://assets.checkra.in/debian/archive.key | gpg --dearmor | sudo te
 echo 'deb [signed-by=/usr/share/keyrings/checkra1n.gpg] https://assets.checkra.in/debian /' | sudo tee /etc/apt/sources.list.d/checkra1n.list
 apt update
 apt install -y python libcurl4-openssl-dev libplist-dev libzip-dev openssl libssl-dev libusb-1.0-0-dev libreadline-dev build-essential git make automake libtool pkg-config checkra1n sshpass
+git clone 'https://github.com/libimobiledevice/libimobiledevice-glue'
 git clone 'https://github.com/libimobiledevice/libirecovery'
 git clone 'https://github.com/libimobiledevice/idevicerestore'
 git clone 'https://github.com/libimobiledevice/usbmuxd'
@@ -106,6 +107,7 @@ git clone 'https://github.com/libimobiledevice/libusbmuxd'
 git clone 'https://github.com/libimobiledevice/libplist'
 git clone 'https://github.com/rcg4u/iphonessh.git'
 git clone 'https://github.com/DanielVolt/ipwndfu.git'
+cd ./libimobiledevice-glue && ./autogen.sh --without-cython && sudo make install && cd ..
 cd ./libplist && ./autogen.sh --without-cython && sudo make install && cd ..
 cd ./libusbmuxd && ./autogen.sh && sudo make install && cd ..
 cd ./libimobiledevice && ./autogen.sh --without-cython && sudo make install && cd ..
